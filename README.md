@@ -13,7 +13,7 @@ The participants are instructed to drag and drop the items on this surface, unti
 All sample stimuli are taken from the [CNBC Bank of Standarized Stimuli dataset](http://wiki.cnbc.cmu.edu/BOSS)
 ## Requirements - Server
 The minimal setup required to run this template is an apache2 server with PHP. 
-####"Installation":
+#### "Installation":
 1. from the main folder, run 
 ``` bash
 chmod -R 777 data
