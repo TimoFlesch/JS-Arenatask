@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title> Stimulus Dissimilarity Ratings</title>
+	
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="../css/stimeval_design.css">
+	
+	<!-- jquery -->
+	<script   src="http://code.jquery.com/jquery-3.1.0.min.js"  
+	 integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   
+	 crossorigin="anonymous">	 	
+	</script>
+
+	<script   src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   
+	integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   
+	crossorigin="anonymous">
+	</script>
+	
+	<!-- javascript -->
+	<script type="text/javascript" src="../js/arena_main.js"         ></script>
+	<script type="text/javascript" src="../js/arena_params.js"       ></script>
+	<script type="text/javascript" src="../js/arena_dragndrop.js"    ></script>
+	<script type="text/javascript" src="../js/arena_expt.js"         ></script>
+	<script type="text/javascript" src="../js/arena_stimuli.js"      ></script>
+	<script type="text/javascript" src="../js/arena_userinterface.js"></script>
+	<script type="text/javascript" src="../js/arena_draw.js"         ></script>
+	<script type="text/javascript" src="../js/arena_goto.js"         ></script>
+	<script type="text/javascript" src="../js/lib/random.js"         ></script>
+	<script type="text/javascript" src="../js/lib/math.js"           ></script>
+	<script type="text/javascript" src="../js/lib/draw.js"           ></script>
+	<script type="text/javascript" src="../js/lib/external/raphael.js"></script>
+	<script type="text/javascript" src="../js/lib/external/sprintf.min.js"></script>
+
+	<!-- php -->
+	<script type="text/php" src="../php/io.php"                      ></script>
+	
+</head>
+
+<body>
+	<h1>
+		Please drag and drop the items until the distances between them reflects how (dis)similar they appear to be.<br>	
+		Once you're happy with the result, press the "next trial" button.<br>
+	</h1>
+
+	<div id="coords"></div>
+
+
+	<script>
+		
+		$(document).ready(function() {
+			runDissimJudgeExp();
+		});
+	</script>
+</body>
+
+</html>
