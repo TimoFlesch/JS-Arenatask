@@ -4,9 +4,13 @@ The code is modularized and allows easy customisation and integration in existin
 Participant Data is recorded throughout the session and stored as JSON file on the server (requires PHP).
 ## Overview 
 On each trial, a set of stimuli are displayed in a circle on a two-dimensional canvas.    
-![arena](./docu/arena.png=250x)  
+<!-- ![arena](./docu/arena.png=250x)  -->
+<img src="./docu/arena.png" width="
+450"> </img>  
 The participants are instructed to drag and drop the items on this surface, until the pairwise distances between all items reflects the subjectively perceived (dis)similarity. It's not possible to move the items out of the circular area. Once the participant is satisfied with the arrangement he/she continues with the next trial via button press. The script ends automatically and stores the data on the server once the predefined number of trials has been reached.   
-![dragndrop](./docu/dragndrop.png=250x)  
+<!-- ![dragndrop](./docu/dragndrop.png=250x)  -->
+<img src="./docu/dragndrop.png" width="450"> </img>     
+All sample stimuli are taken from the [CNBC Bank of Standarized Stimuli dataset](http://wiki.cnbc.cmu.edu/BOSS)
 ## Requirements - Server
 The minimal setup required to run this template is an apache2 server with PHP. 
 ####"Installation":
