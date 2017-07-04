@@ -18,6 +18,10 @@ board.circle   =   board.paper.object.circle(board.centre[0],
 	board.centre[1], board.radius).attr({'fill': params_vis.circle.colour, 
 	'opacity': params_vis.circle.opacity});
 
+if (params_vis.grid.paintGrid) {
+	drawGrid();	
+}
+
 
 // BUTTON 
 // create button to go to next trial

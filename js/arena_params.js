@@ -34,7 +34,11 @@ function arena_setParams() {
 	params_vis.circle             =                {};
 	params_vis.circle.colour      =            'grey';
 	params_vis.circle.opacity     =               '1';
-
+	params_vis.grid               =                {};
+	params_vis.grid.paintGrid     =                 0;  // toggle grid
+	params_vis.grid.spacing       =  0.2*board.radius;  // grid spacing in deg
+	params_vis.grid.thickness     =                 2;  // grid line width
+	params_vis.grid.colour        =           'black';  // grid colour
 
 	// USER INTERFACE
 	params_ui.button              =           {};

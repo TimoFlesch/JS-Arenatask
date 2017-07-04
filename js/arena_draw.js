@@ -56,6 +56,41 @@ helper function to draw a little thank you message
 board.circle.remove();
 // stopClock();
 $('body').html(['<div id=".centre" style="text-align:center;">Thanks for taking part!</div>']);
-//stimulus = board.paper.object.image('../happytree.jpg',board.centre[0]-100,board.centre[1]-100,200,200)
+
+
+}
+
+
+
+function drawGrid() {
+/*
+	draws grid on canvas
+*/
+
+	board.grid = board.paper.object.set();
+	// 1. linearly space radius
+	dxy_tmp = math_linspace(0,params_vis.grid.spacing,board.radius);
+	
+	// 2. horizontal lines: find xy start and end coordinates
+	for (var ii=0; ii<length(dxy_tmp); ii++) {
+		// calculate translation coords dx and dy
+		dy_tmp = dxy_tmp[ii];
+		dx_tmp = Math.sqrt(Math.pow(board.radius,2)-Math.pow(dy_tmp,2));
+		
+		// draw horizontal lines above and below
+		line = board.paper.object.path(['M',board.centre[0]-dx_tmp,board.centre[1]+dy_tmp,'L',board.centre[0]+dx_tmp,board.centre[1]+dy_tmp]);
+		board.grid.push(line);
+		line = board.paper.object.path(['M',board.centre[0]-dx_tmp,board.centre[1]-dy_tmp,'L',board.centre[0]+dx_tmp,board.centre[1]-dy_tmp]);
+		board.grid.push(line);
+
+		// draw vertical lines left and right
+		dx_tmp = dxy_tmp[ii];
+		dy_tmp = Math.sqrt(Math.pow(board.radius,2)-Math.pow(dy_tmp,2));
+		line = board.paper.object.path(['M',board.centre[0]-dx_tmp,board.centre[1]+dy_tmp,'L',board.centre[0]-dx_tmp,board.centre[1]-dy_tmp]);
+		board.grid.push(line);
+		line = board.paper.object.path(['M',board.centre[0]+dx_tmp,board.centre[1]+dy_tmp,'L',board.centre[0]+dx_tmp,board.centre[1]-dy_tmp]);
+		board.grid.push(line);
+	}
+	board.grid.attr('stroke','darkgray');
 
 }
